@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:textColor="#000000"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textColor="#000000">
+
+        <!-- 右上角關閉按鈕 -->
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <!-- 顯示目前選擇新增的日期 -->
+        <TextView
+            android:id="@+id/tv_selected_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="選擇日期：2024/12/09"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000" />
+
+        <!-- 月經流量選擇 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="月經流量"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <RadioGroup
+            android:id="@+id/rg_menstruation_flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="些許量"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/rb_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正常量"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/rb_heavy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="量多"
+                android:textColor="#000000" />
+        </RadioGroup>
+
+        <!-- 今日症狀選擇 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日症狀"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/ll_symptoms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textColor="#000000">
+                <!-- 動態新增症狀選項 -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- 今日心情選擇 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日心情"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/ll_moods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textColor="#000000">
+                <!-- 動態新增心情選項 -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- 體溫紀錄 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="體溫紀錄"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/et_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="輸入體溫 (°C)"
+            android:inputType="numberDecimal"
+            android:textColor="#000000" />
+
+        <!-- 備註輸入 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="備註"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/et_notes"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="輸入備註..."
+            android:maxLength="200"
+            android:textColor="#000000" />
+
+        <!-- 確認與刪除按鈕 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:enabled="false"
+                android:text="刪除資料" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="儲存資料" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
