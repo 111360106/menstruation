@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">月經追蹤</string>
+    <string name="chart">圖表</string>
+    <string name="settings">設定</string>
+</resources>

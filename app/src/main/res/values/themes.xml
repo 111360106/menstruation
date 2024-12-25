@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Menstruation" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- 確保背景顏色是白色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="Theme.Menstruation" parent="Base.Theme.Menstruation" />
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+    <style name="WhiteDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:background">#FFFFFF</item> <!-- 設置背景為白色 -->
+        <item name="android:textColor">#000000</item> <!-- 設置背景為白色 -->
+        <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">#2196F3</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">#2196F3</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CustomButton">
+        <item name="android:backgroundTint">#2196F3</item> <!-- 背景色 -->
+        <item name="android:textColor">#FFFFFF</item> <!-- 文字色 -->
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
